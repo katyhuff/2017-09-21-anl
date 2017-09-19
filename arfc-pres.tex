@@ -13,7 +13,8 @@
 \subtitle[NNSA Seminar]{Argonne Nuclear Nonproliferation Seminar:\\Reactors 
 and the Commercial Nuclear Industry}
 %\author[short name]{long name}
-\author[K. Huff]{Kathryn Huff\\Advanced Reactors and Fuel Cycles Group}
+\author[K. Huff]{Kathryn Huff\\Advanced Reactors and Fuel Cycles 
+Group\\\url{http://arfc.github.io/pres/2017-09-21-anl.pdf}}
 %\date[short date]{long date}
 \date[09.21.2017]{September 21, 2017}
 %\institution[short name]{long name}
@@ -56,6 +57,7 @@ and the Commercial Nuclear Industry}
     }{}
 \makeatother
 
+\usepackage{draftwatermark}
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% From uw-beamer Here's a handy bit of code to place at 
@@ -71,6 +73,7 @@ and the Commercial Nuclear Industry}
 \addtolength{\highlightdepth}{\highlightmargin}
 \addtolength{\highlightheight}{\highlightdepth}
 \newcommand*{\Highlight}{\rlap{\textcolor{HighlightBackground}{\rule[-\highlightdepth]{\linewidth}{\highlightheight}}}}
+\setcounter{tocdepth}{2}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%--------------------------------%%
 \begin{withoutheadline}
@@ -90,22 +93,47 @@ and the Commercial Nuclear Industry}
 \section{Introduction}
 \subsection{Nuclear Nations}
 \input{nations}
-\subsection{Spent Fuel Options}
-\input{options}
-\subsection{Repository Concepts}
-\input{conceptual}
-\section{Methods}
-\subsection{Illinois Colors}
-\input{fierce}
-\section{Conclusion}
+\subsection{Spent Fuel Inventory}
+\input{inventory}
+\section{Spent Fuel Options}
+\include{options}
+\subsection{Long-Term Storage}
+\include{storage}
+\subsection{Reprocessing}
+\include{reprocessing}
+\subsection{Deep Geological Disposal}
+\include{conceptual}
+\include{concepts_components}
+\include{concepts_layouts}
+\include{concepts_geologies}
+
+\section{Challenges}
+\subsection{Challenge: Financial}
+\include{cost}
+\subsection{Challenge: Political}
+\include{political}
+\subsection{Challenge: Security}
+\include{security}
+\subsection{Challenge: Geological}
+\subsubsection{Metrics}
+\include{performance_metrics}
+\subsubsection{Thermal Loading}
+\include{performance_thermal}
+\subsubsection{Radionuclide Transport and Release}
+\include{performance_release}
+\subsubsection{Thermal Contributors}
+\include{fuel_cycle_thermal}
+\subsubsection{Dose Contributors}
+\include{fuel_cycle_dose}
+\subsubsection{Other Factors}
+\include{fuel_cycle_other}
 \input{conclusion}
-\input{acks}
 %%--------------------------------%%
 %%--------------------------------%%
 \begin{frame}[allowframebreaks]
   \frametitle{References}
   \bibliographystyle{plain}
-  {\footnotesize \bibliography{2017-09-21-anl.bib} }
+  {\footnotesize \bibliography{2017-09-21-anl} }
 
 \end{frame}
 
